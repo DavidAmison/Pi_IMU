@@ -1,13 +1,17 @@
 # Pi_IMU
-Python class for handling the Berry IMU. Currently only the Accelerometer, Gyro and
-Magnetometer are supported.
+Python class for handling the Berry IMU.
+Currently only the Accelerometer, Gyro and Magnetometer are supported.
 
-To use this class in your project download the IMU.py file.
+# Instructions
+
+To use this class in your project download the IMU.py and LSM9DS0.py file.
 
 You will then need to import the class into your project using:
+
 from IMU import IMU
 
 The IMU object can then be created using:
+
 imu = IMU()
 
 Before using any of the sensors they must be activated, you can either use the default 
@@ -22,6 +26,7 @@ imu.readAcc, imu.readGyr or imu.readMag
 
 It is also possible to continuously read data from the sensors in the background and
 save these to a file. To do that call: 
+
 imu.take_measurements_process(freq, file_name, cut=None)
 
 where freq is the frequency of measurements in Hz, file_name is the name of the file
